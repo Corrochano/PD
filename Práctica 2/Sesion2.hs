@@ -1,4 +1,4 @@
--- Álvaro Corrochano López DNI: 02711642B
+-- Álvaro Corrochano López
 -- Práctica 2
 
 
