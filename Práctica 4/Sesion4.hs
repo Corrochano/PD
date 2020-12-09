@@ -1,4 +1,4 @@
--- Práctica 4 - Álvaro Corrochano López - DNI: 02711642B
+-- Práctica 4 - Álvaro Corrochano López
 
 -- Ejercicio 1
 
