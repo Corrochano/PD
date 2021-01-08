@@ -88,6 +88,8 @@ poner_encima(X,Y) :- cima(X), cima(Y), pilas_contiguas(X,Y).
 pilas_contiguas(X,Y) :- pila_izquierda(X,Y).
 pilas_contiguas(X,Y) :- pila_izquierda(Y,X).
 
+% Función añadida
+
 mas_por_encima_que(X,Y) :-  por_arriba(X,L1), por_arriba(Y,L2), length(L1, N1),
     length(L2,N2), N1 > N2.
 
