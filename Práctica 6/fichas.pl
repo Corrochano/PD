@@ -1,4 +1,3 @@
-% Nombre: Álvaro Corrochano López
 % Tenemos un conjunto de fichas apiladas en tres columnas sobre una mesa.
 %  segun rl esquema siguiente:
 %
@@ -53,15 +52,15 @@ por_encima_de(X,Y) :- sobre(X,Y).
 por_encima_de(X,Y) :- sobre(X,Z), por_encima_de(Z,Y).
 
 % por_encima_de_ERROR(X,Y).
-%Llamadas recursivas infinitas cuando no hay m‡s soluciones o el objetivo es falso.
+%Llamadas recursivas infinitas cuando no hay mâ€¡s soluciones o el objetivo es falso.
 % uso: por_encima_de_ERROR(e/s, e/s).
 por_encima_de_ERROR(X,Y) :- sobre(X,Y).
 por_encima_de_ERROR(X,Y) :- por_encima_de_ERROR(X,Z), sobre(Z,Y).
 
 
 % pila_izquierda(X,Y)
-% la ficha X est‡ en la pila situada inmediatamente a la izquierda de
-%la pila en la que est‡ la ficha Y
+% la ficha X estâ€¡ en la pila situada inmediatamente a la izquierda de
+%la pila en la que estâ€¡ la ficha Y
 % uso: pila_izquierda(e/s,e/s)
 pila_izquierda(X,Y) :- izquierda(X,Y).				% misma altura
 pila_izquierda(X,Y) :- izquierda(Z,Y), por_encima_de(X,Z).	% X mas arriba que Y
