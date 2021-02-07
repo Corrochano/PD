@@ -131,8 +131,21 @@ introRel = do
    else do
     sy <- getLine
     y <- return (read sy::Int)
-    print (x,y)
-    introRel
+    print (R [(x,y)])
+    introRel2 [(x,y)]
+
+introRel2 :: [(Int, Int)] -> IO ()
+
+introRel2 xs = do -- Lista por parámetro para ir almacenando las tuplas guardadas
+   putStrLn "Introduce un par:  (0 para salir)"
+   sx <- getLine
+   x <- return (read sx::Int)
+   if x == 0 then return ()
+   else do
+    sy <- getLine
+    y <- return (read sy::Int)
+    print (R (xs ++ [(x,y)]))
+    introRel2 (xs ++ [(x,y)])
 
 
 
