@@ -121,6 +121,8 @@ composicion  (R ra) (R rb) = if (compararSop (soporte (R ra)) (soporte (R rb))) 
 
 -- introRel lee una relación introducida por el usuario. Debe pedir al usuario que introduzca los pares de la relación uno a uno.
 
+introRel :: IO ()
+
 introRel = do
    putStrLn "Introduce un par:  (0 para salir)"
    sx <- getLine
